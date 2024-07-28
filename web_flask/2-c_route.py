@@ -33,8 +33,6 @@ def text(text):
     Handle text requests
     """
     return "C " + text.replace("_", " ")
-
-
 if __name__ == '__main__':
     # Run the Flask application on all available IP addresses and port 5000.
     app.run(host='0.0.0.0', port=5000)

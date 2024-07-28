@@ -26,7 +26,7 @@ def hbnb():
     Handle requests to the '/hbnb' URL.
     Returns a different greeting message.
     """
-    return "HBNB!"
+    return "HBNB"
 
 
 if __name__ == "__main__":

@@ -1,11 +1,11 @@
 #!/usr/bin/python3
 """
-Script that starts a Flask web application:
-Web application must be listening on 0.0.0.0, port 5000.
+Script that starts a Flask web application.
+The web application listens on 0.0.0.0, port 5000.
 """
 
 
-from flask import Flask
+from flask import Flask, render_template
 
 
 app = Flask(__name__)
@@ -55,6 +55,15 @@ def number(n):
     Displays “n is a number” only if n is an integer.
     """
     return "{} is a number".format(n)
+
+
+@app.route("/number_template/<int:n>", strict_slashes=False)
+def template(n):
+    """
+    Handle template requests to the 'number_template/<n>' URL.
+    Display an HTML page only if n is an integer.
+    """
+    return render_template("5-template.html", n=n)
 
 
 if __name__ == '__main__':

@@ -3,7 +3,6 @@
 Script that starts a Flask web application.
 The web application listens on 0.0.0.0, port 5000.
 """
-
 from flask import Flask, render_template
 
 
